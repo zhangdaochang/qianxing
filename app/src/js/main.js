@@ -103,3 +103,6 @@ document.addEventListener('keydown',(e)=>{
     })
     
 })
+document.querySelector('.global').addEventListener('keydown',(e)=>{
+    e.stopPropagation()
+})
