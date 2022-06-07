@@ -9,9 +9,7 @@ const globalAppConfig = {
         {serchName:'必应',serchUrl:'https://cn.bing.com/search?q='}
     ]
 }
-
-!function(){
-    if (x===null){
+if (x===null){
         const appSiteList =[
             {siteName:'酷狗',siteUrl:'https://www.kugou.com/'},
             {siteName:'bilibli',siteUrl:'https://www.bilibili.com/'},
@@ -19,13 +17,15 @@ const globalAppConfig = {
         ]
         let SiteString = JSON.stringify(appSiteList)
         localStorage.setItem('x',SiteString)    
-    }else{
+}else{
         const appSiteList = x.length !== 0 ? x : [
             {siteName:'酷狗',siteUrl:'https://www.kugou.com/'},
             {siteName:'bilibli',siteUrl:'https://www.bilibili.com/'},
             {siteName:'MDN',siteUrl:'https://developer.mozilla.org'}
         ]
-    }
+}
+!function(){
+    
     localStorage.getItem('isFrist') === null ? document.querySelector('.global').style = 'display:block' : ''
     document.querySelector('body').style.height=window.innerHeight+'px';
     if(globalAppConfig.backgroundImg !== ''){
