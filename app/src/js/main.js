@@ -10,12 +10,6 @@ const globalAppConfig = {
     ]
 }
 
-const appSiteList = x.length !== 0 ? x : [
-    {siteName:'酷狗',siteUrl:'https://www.kugou.com/'},
-    {siteName:'bilibli',siteUrl:'https://www.bilibili.com/'},
-    {siteName:'MDN',siteUrl:'https://developer.mozilla.org'}
-]
-
 !function(){
     if (x===null){
         const appSiteList =[
@@ -25,6 +19,12 @@ const appSiteList = x.length !== 0 ? x : [
         ]
         let SiteString = JSON.stringify(appSiteList)
         localStorage.setItem('x',SiteString)    
+    }else{
+        const appSiteList = x.length !== 0 ? x : [
+            {siteName:'酷狗',siteUrl:'https://www.kugou.com/'},
+            {siteName:'bilibli',siteUrl:'https://www.bilibili.com/'},
+            {siteName:'MDN',siteUrl:'https://developer.mozilla.org'}
+        ]
     }
     localStorage.getItem('isFrist') === null ? document.querySelector('.global').style = 'display:block' : ''
     document.querySelector('body').style.height=window.innerHeight+'px';
