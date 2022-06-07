@@ -9,7 +9,7 @@ const globalAppConfig = {
         {serchName:'必应',serchUrl:'https://cn.bing.com/search?q='}
     ]
 }
-const appSiteList = (x.length !== 0) ? x : [
+const appSiteList = x.length !== 0 || x !== null? x : [
     {siteName:'酷狗',siteUrl:'https://www.kugou.com/'},
     {siteName:'bilibli',siteUrl:'https://www.bilibili.com/'},
     {siteName:'MDN',siteUrl:'https://developer.mozilla.org'}
