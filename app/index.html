@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>前行-导航</title>
+</head>
+<body>
+    <main>
+        <div class="toast" id="toast">
+           <p> test test</p>
+        </div>
+        <div class="global">
+
+            <input type="text" name="backgrond" placeholder="在这里输入背景图片地址。。。">
+            <button id='setHtmlBackground'>设置背景图片</button>
+            <HR align=center width=300 color=#987cb9 SIZE=1>
+            <input type="text" name="appName" placeholder="在这里输入要收藏网址的名称。">
+            <input type="text" name="appUrl" placeholder="在这里输入要收藏网址的URL。">
+            <button id="addSite">添加收藏网址</button>
+            <HR align=center width=300 color=#987cb9 SIZE=1>
+            
+            <p>在这里选择你想要的搜索引擎</p>
+            <div id="QieChecked">
+                <div style="display: inline;">
+                    <span> 百度 </span><input type="radio" checked name="serchList" value='https://www.baidu.com/s?wd='/>
+                </div>
+            </div>
+            <HR align=center width=300 color=#987cb9 SIZE=1>
+            <p>**添加更多的搜索引擎**</p>
+            <input type="text" name="searcName" placeholder="在这里输入搜索引擎名称。">
+            <input type="text" name="searcUrl" placeholder="在这里输入搜索引擎名称URL。">
+            <button id="addSerach">添加搜索引擎</button>
+            <HR align=center width=300 color=#987cb9 SIZE=1>
+            <div>
+                <p>**长按你收藏的网址可以删除**</p>
+                <p>**长按Logo可以呼出菜单**</p>
+                <p>**完整的 Url 应该带有协议**</p>
+                <p>**搜索引擎类似：https://cn.bing.com/search?q=**</p>
+            </div>
+
+        </div>
+        <div class="logo">QinDuan</div>
+        <div class="serch">
+            <input id="serach" type="text">
+            <object data="./src/image/antOutline-search.svg" type="image/svg+xml"></object>
+        </div>
+        <div class="siteList">
+            <div class="site"></div>
+            <div class="site"></div>
+            <div class="site"></div>
+            <div class="site"></div>
+            <div class="site"></div>
+            <div class="site"></div>
+            <div class="site"></div>
+            <div class="site"></div>
+        </div>
+    </main>
+    <footer>
+        <span>copyright@冀ICP备2021028693号</span>
+    </footer>
+    <script src="./src/js/convert2Pinyin.js"></script>
+    <script src="./src/js/util.js"></script>
+    <script src="./src/js/main.js"></script>
+
+</body>
+</html>

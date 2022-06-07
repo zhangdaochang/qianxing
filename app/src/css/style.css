@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    -webkit-touch-callout:none; /*系统默认菜单被禁用*/
+    -webkit-user-select:none; /*webkit浏览器*/
+    -khtml-user-select:none; /*早期浏览器*/
+    -moz-user-select:none;/*火狐*/
+    -ms-user-select:none; /*IE10*/
+    user-select:none;
+}
+input{
+    -webkit-user-select:auto; /*webkit浏览器*/
+}
+@media screen and (min-width: 600px) {
+    body {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .global{
+        display: none;
+        font-size: 20px;
+        padding-top: 50px;
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        border: 1px solid red;
+        margin: 0 auto;
+        text-align: center;
+        background-color: rgb(192,192,192,0.4);
+    }
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background:#fff;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main{
+    flex: 1 0 auto;
+}
+.logo{
+    color: rgba(16, 16, 16, 100);
+    font-size: 48px;
+    font-family: OPPOSans-bold;
+    text-align: center;
+    margin-top: 134px;
+}
+.serch{
+    position: relative;
+    margin-top: 34px;
+    display: flex;
+    padding: 10px;
+}
+.serch > input{
+    width: 100%;
+    height: 60px;
+    border-radius: 15px;
+    border: 4px solid rgba(3, 3, 3, 100);
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 65px;
+}
+.serch > object{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 100);
+}
+.siteList{
+    display: flex;
+    padding:0px 15px;
+    margin-top: 42px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+.site{
+    padding: 10px;
+    display: flex;
+    width: 80px;;
+    flex-direction: column;
+    align-items:center;
+    margin-bottom: 25px;
+}
+.siteLogo{
+    width: 100%;
+}
+.siteLogo > img{
+    border-radius: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.siteText{
+    font-size: 12px;
+    font-family: PingFangSC-regular;
+}
+
+footer{
+    flex: 0 0 auto;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.toast{
+    display: none;
+    position: absolute;
+    width:80%;
+    left: 10%;
+    bottom: 100px;
+    height: 60px;
+}
+.toast > p{
+    padding: 10px;
+    text-align: center;
+    background: black;
+    color: green;
+    font-size: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+    .global{
+        display: none;
+        font-size: 20px;
+        padding-top: 50px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        border: 1px solid red;
+        margin: 0 auto;
+        text-align: center;
+        background-color: rgb(192,192,192,0.4);
+    }
+}
