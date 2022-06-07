@@ -9,13 +9,24 @@ const globalAppConfig = {
         {serchName:'必应',serchUrl:'https://cn.bing.com/search?q='}
     ]
 }
-const appSiteList = x.length !== 0 || x !== null? x : [
+const appSiteList =[
     {siteName:'酷狗',siteUrl:'https://www.kugou.com/'},
     {siteName:'bilibli',siteUrl:'https://www.bilibili.com/'},
     {siteName:'MDN',siteUrl:'https://developer.mozilla.org'}
 ]
-
+if (x===null){
+        let SiteString = JSON.stringify(appSiteList)
+        localStorage.setItem('x',SiteString)    
+}else{
+        const appSiteList = x.length !== 0 ? x : [
+            {siteName:'酷狗',siteUrl:'https://www.kugou.com/'},
+            {siteName:'bilibli',siteUrl:'https://www.bilibili.com/'},
+            {siteName:'MDN',siteUrl:'https://developer.mozilla.org'}
+        ]
+}
 !function(){
+    
+    localStorage.getItem('isFrist') === null ? document.querySelector('.global').style = 'display:block' : ''
     document.querySelector('body').style.height=window.innerHeight+'px';
     if(globalAppConfig.backgroundImg !== ''){
         setBackground(globalAppConfig.backgroundImg)
@@ -55,6 +66,7 @@ window.onbeforeunload = ()=>{
     let SerachString = JSON.stringify(globalAppConfig)
     localStorage.setItem('x',SiteString)
     localStorage.setItem('y',SerachString)
+    localStorage.setItem('isFrist','1')
 }
 setHtmlBackground.addEventListener('click',()=>{
     setBackground(document.querySelector("input[name=backgrond]").value)
