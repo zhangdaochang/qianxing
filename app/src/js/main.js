@@ -98,7 +98,7 @@ serach.addEventListener('keydown',(e)=>{
 document.addEventListener('keydown',(e)=>{  
     let {key} = e
     appSiteList.forEach((e)=>{
-        if(strSimilar(key,e.siteName) !== 0){
+        if(strSimilar(key,convert2Pinyin(e.siteName).toLocaleLowerCase()) !== 0){
             window.location = e.siteUrl
         }
     })
