@@ -9,7 +9,7 @@ const globalAppConfig = {
         {serchName:'必应',serchUrl:'https://cn.bing.com/search?q='}
     ]
 }
-const appSiteList =[
+let appSiteList =[
     {siteName:'酷狗',siteUrl:'https://www.kugou.com/'},
     {siteName:'bilibli',siteUrl:'https://www.bilibili.com/'},
     {siteName:'MDN',siteUrl:'https://developer.mozilla.org'}
@@ -18,7 +18,8 @@ if (x===null){
         let SiteString = JSON.stringify(appSiteList)
         localStorage.setItem('x',SiteString)    
 }else{
-        const appSiteList = x.length !== 0 ? x : [
+        alert(x)
+        appSiteList = x.length !== 0 ? x : [
             {siteName:'酷狗',siteUrl:'https://www.kugou.com/'},
             {siteName:'bilibli',siteUrl:'https://www.bilibili.com/'},
             {siteName:'MDN',siteUrl:'https://developer.mozilla.org'}
